@@ -32,6 +32,12 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
           cache: maven
+  
+      - name: Step 3 - Started Appium Server
+        uses: moatazeldebsy/Appium-Server-GitHub-Action@V1.0.5
 
-      - name: Step 3 - Build Maven Project
+      - name: Step 4 - Build Maven Project
         run: mvn -B package --file pom.xml
+      
+      - name: Step 5 - Trigger Tests
+        run: mvn test
