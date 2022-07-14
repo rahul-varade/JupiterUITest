@@ -38,8 +38,8 @@ jobs:
       
       - name: Check current working directory
         run: pwd
-#       - name: Step 4 - Build Maven Project
-#         run: mvn -B package --file pom.xml
+      - name: Step 4 - Build Maven Project
+        run: mvn clean
       
-#       - name: Step 5 - Trigger Tests
-#         run: mvn test
+      - name: Step 5 - Trigger Tests
+        run: mvn test
