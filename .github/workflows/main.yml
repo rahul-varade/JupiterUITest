@@ -35,9 +35,11 @@ jobs:
   
       - name: Step 3 - Started Appium Server
         uses: moatazeldebsy/Appium-Server-GitHub-Action@V1.0.5
-
-      - name: Step 4 - Build Maven Project
-        run: mvn -B package --file pom.xml
       
-      - name: Step 5 - Trigger Tests
-        run: mvn test
+      - name: Check current working directory
+        run: pwd
+#       - name: Step 4 - Build Maven Project
+#         run: mvn -B package --file pom.xml
+      
+#       - name: Step 5 - Trigger Tests
+#         run: mvn test
